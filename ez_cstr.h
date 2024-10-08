@@ -1,6 +1,6 @@
 
-#ifndef EZC_STRING
-#define EZC_STRING
+#ifndef EZC_STRING_H
+#define EZC_STRING_H
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
