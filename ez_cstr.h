@@ -1,6 +1,6 @@
-#ifndef EZC_H
-#define EZC_H
 
+#ifndef EZC_STRING
+#define EZC_STRING
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -20,8 +20,8 @@
   #define EZC_REALLOC(size) realloc(size) 
 #endif
 
-#ifndef EZC_DEFAULT_INIT_CAP
-  #define EZC_DEFAULT_INIT_CAP 16
+#ifndef EZC_DEFAULT_INIT_STRING_CAP
+  #define EZC_DEFAULT_INIT_STRING_CAP 16
 #endif
 
 #define EZC_STR_FMT "%.*s"
@@ -57,7 +57,7 @@ char EZC_String_pop(String* str);
 void EZC_String_c_str(String *str, char* s);
 StringView EZC_StringView_from_String(String str);
 
-#ifdef EZC_IMPL
+#ifdef EZC_STRING_IMPL
 
 String EZC_String_make_with_cap(size_t cap) {
     char* str = (char*)EZC_MALLOC(sizeof(char) * cap);
@@ -77,7 +77,7 @@ String EZC_String_make_with_cap(size_t cap) {
 }
 
 String EZC_String_make_default() {
-    return EZC_String_make_with_cap(EZC_DEFAULT_INIT_CAP);
+    return EZC_String_make_with_cap(EZC_DEFAULT_INIT_STRING_CAP);
 }
 
 String EZC_String_clone(String* str) {
