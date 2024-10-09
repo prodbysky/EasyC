@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #define EZC_STRING_IMPL
 #include "ez_cstr.h"
@@ -23,21 +24,21 @@ int main() {
 
 
     // EZC_PPM_TEST
-    unsigned char pixels[]= {
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
-        255, 255, 255,
+    uint32_t pixels[]= {
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
+        0xffffff,
     };
     const size_t w = 3;
     const size_t h = 3;
     FILE* file = fopen("test.ppm", "wb");
-    EZC_PPM_write(file, pixels, w, h, EPF_RGB8);
+    EZC_PPM_write(file, pixels, w, h, EPF_RGB_HEX);
     fclose(file);
 
     return 0;
