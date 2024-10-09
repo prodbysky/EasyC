@@ -19,5 +19,7 @@ respectively, if not defined it will use libc functions
     This is a utility for more ease of use with c strings
  - PPM:
     This is a utility for writing and in the future reading PPM files
+ - Vectors:
+    This is a utility for doing math with Vectors, not C++ vectors :)
  - And more to come!
 
