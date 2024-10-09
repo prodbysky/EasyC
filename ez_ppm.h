@@ -12,7 +12,6 @@ typedef enum {
 
 int EZC_PPM_write(FILE* fd, void* pixels, size_t width, size_t height, EZC_PPM_Format format);
 
-#define EZC_PPM_IMPL
 #ifdef EZC_PPM_IMPL
 
 static void _EZC_PPM_write_header(FILE* fd, size_t w, size_t h, size_t max_val) {
