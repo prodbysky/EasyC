@@ -1,4 +1,3 @@
-
 #ifndef EZC_STRING_H
 #define EZC_STRING_H
 #include <stdio.h>
